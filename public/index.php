@@ -23,7 +23,7 @@ interface TestInterface {
 
 }
 
-class test implements {
+class test implements TestInterface{
 
 }
 
