@@ -1,0 +1,1 @@
+Here puts service classes. Namespace Massfice\Application\Services.

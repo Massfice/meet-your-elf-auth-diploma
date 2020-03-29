@@ -1,0 +1,1 @@
+Here is place for action classes. Namespace Massfice\Application\Actions.

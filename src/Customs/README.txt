@@ -1,0 +1,1 @@
+Here put your custom classes. Namespace Massfice\Application\Customs.

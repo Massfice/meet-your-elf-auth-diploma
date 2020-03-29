@@ -1,0 +1,32 @@
+{
+    "name": "massfice/application",
+    "description": "Application skeleton for my applications. This is for my diploma project.",
+    "type": "project",
+    "require": {
+        "massfice/clean-url": "^v1.0",
+        "massfice/action-manager": "^v1.0",
+        "massfice/view": "^v1.0",
+        "massfice/response-status": "^v1.0",
+        "massfice/action": "^v1.0",
+        "massfice/action-executor": "^v1.0",
+        "smarty/smarty": "^3.1",
+        "massfice/application-system": "^v1.0",
+        "massfice/smart": "^v1.0",
+        "massfice/service": "^v1.0",
+        "massfice/loader": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Massfice",
+            "email": "adrian.marian.tomasz.larysz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Massfice\\Application\\": "src/"
+        }
+    },
+    "require-dev": {
+    }
+}

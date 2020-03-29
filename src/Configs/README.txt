@@ -1,0 +1,1 @@
+Here's config classes. Namespace Massfice\Application\Configs.
