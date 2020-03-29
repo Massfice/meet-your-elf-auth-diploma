@@ -53,6 +53,7 @@ var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
 
 function check(string $name, string $namespace, string $interface) : bool {
     $action = $namespace.ucfirst($name);
+    echo "[ ---- ". $action ." ---- ]";
     return class_exists($action) && isset(class_implements($action)[$interface]);
 }
 
