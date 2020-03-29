@@ -19,11 +19,15 @@ $action = $factory->create(Cleans::getAction().$_SERVER["REQUEST_METHOD"]);
 
 var_dump($action);
 
-class test {
+interface TestInterface {
+
+}
+
+class test implements {
 
 }
 
 // $test = new Test();
-var_dump(class_exists("Test"));
+var_dump(class_implements("test"));
 
 ?>
