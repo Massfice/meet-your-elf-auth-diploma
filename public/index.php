@@ -49,29 +49,31 @@ $testAction = $factory2->create("test");
 var_dump($testAction);
 
 // $test = new Test();
-var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
+// var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
 
-function check(string $name, string $namespace, string $interface) : bool {
-    $action = $namespace.ucfirst($name);
-    $class = new $action();
-    var_dump($class);
-    echo "...<br>";
-    var_dump(class_exists($action));
-    echo "...<br>";
-    echo "[ ---- ". $action ." ---- ]";
-    echo "...<br>";
-    echo "...<br>";
-    echo "...<br>";
-    var_dump(class_implements($action));
-    echo "...<br>";
-    echo "...<br>";
-    echo "...<br>";
-    echo "Interface: ". $interface;
+// function check(string $name, string $namespace, string $interface) : bool {
+//     $action = $namespace.ucfirst($name);
+//     $class = new $action();
+//     var_dump($class);
+//     echo "...<br>";
+//     var_dump(class_exists($action));
+//     echo "...<br>";
+//     echo "[ ---- ". $action ." ---- ]";
+//     echo "...<br>";
+//     echo "...<br>";
+//     echo "...<br>";
+//     var_dump(class_implements($action));
+//     echo "...<br>";
+//     echo "...<br>";
+//     echo "...<br>";
+//     echo "Interface: ". $interface;
 
-    return class_exists($action) && isset(class_implements($action)[$interface]);
-}
+//     return class_exists($action) && isset(class_implements($action)[$interface]);
+// }
 
-echo "<br><br><br>";
-var_dump(check("sidGET","\\Massfice\\Application\\Actions\\","Massfice\Action\JsonAction"));
+// echo "<br><br><br>";
+// var_dump(check("sidGET","\\Massfice\\Application\\Actions\\","Massfice\Action\JsonAction"));
+
+var_dump($factory->check("sidGET"));
 
 ?>
