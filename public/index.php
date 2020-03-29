@@ -19,4 +19,11 @@ $action = $factory->create(Cleans::getAction().$_SERVER["REQUEST_METHOD"]);
 
 var_dump($action);
 
+class test {
+
+}
+
+$test = new Test();
+var_dump($test);
+
 ?>
