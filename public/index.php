@@ -23,7 +23,7 @@ class test {
 
 }
 
-$test = new Test();
-var_dump($test);
+// $test = new Test();
+var_dump(class_exists("Test"));
 
 ?>
