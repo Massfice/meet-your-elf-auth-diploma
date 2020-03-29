@@ -44,6 +44,6 @@ class test implements JsonAction {
 }
 
 // $test = new Test();
-var_dump(class_implements("test"));
+var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
 
 ?>
