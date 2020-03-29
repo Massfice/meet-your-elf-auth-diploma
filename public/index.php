@@ -22,7 +22,7 @@ interface TestInterface {
 
 }
 
-class test implements TestInterface, JsonAction{
+class test implements JsonAction {
 
 }
 
