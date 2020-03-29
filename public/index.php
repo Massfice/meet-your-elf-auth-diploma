@@ -72,6 +72,6 @@ function check(string $name, string $namespace, string $interface) : bool {
 }
 
 echo "<br><br><br>";
-var_dump(check("sidGET","\\Massfice\\Application\\Actions\\","Massfice\Action\Json"));
+var_dump(check("sidGET","\\Massfice\\Application\\Actions\\","Massfice\Action\JsonAction"));
 
 ?>
