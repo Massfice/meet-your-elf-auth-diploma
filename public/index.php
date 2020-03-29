@@ -9,7 +9,8 @@ use Massfice\Application\System\Cleans;
 
 
 
-echo Cleans::getType() . "<br>";
-echo Cleans::getAction();
+echo "Type: " . Cleans::getType() . "<br>";
+echo "Action: " . Cleans::getAction() . "<br>";
+echo "Method: " . $_SERVER["REQUEST_METHOD"];
 
 ?>
