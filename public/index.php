@@ -59,6 +59,10 @@ function check(string $name, string $namespace, string $interface) : bool {
     var_dump(class_exists($action));
     echo "...<br>";
     echo "[ ---- ". $action ." ---- ]";
+    echo "...<br>";
+    echo "...<br>";
+    echo "...<br>";
+    var_dump(class_implements($action));
     return class_exists($action) && isset(class_implements($action)[$interface]);
 }
 
