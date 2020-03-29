@@ -43,6 +43,11 @@ class test implements JsonAction {
     }
 }
 
+$factory2 = new JsonActionFactory("");
+$testAction = $factory2->create("test");
+
+var_dump($testAction);
+
 // $test = new Test();
 var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
 
