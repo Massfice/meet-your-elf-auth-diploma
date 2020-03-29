@@ -51,12 +51,12 @@ var_dump($testAction);
 // $test = new Test();
 var_dump(class_implements("\\Massfice\\Application\\Actions\\sidGET"));
 
-function check(string $name, string $namespace) : bool {
+function check(string $name, string $namespace, string $interface) : bool {
     $action = $namespace.ucfirst($name);
-    return class_exists($action) && isset(class_implements($action)[$this->interface]);
+    return class_exists($action) && isset(class_implements($action)[$interface]);
 }
 
 echo "<br><br><br>";
-var_dump(check("sidGET","\\Massfice\\Application\\Actions\\"));
+var_dump(check("sidGET","\\Massfice\\Application\\Actions\\","Massfice/Action/Json"));
 
 ?>
