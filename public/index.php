@@ -55,6 +55,9 @@ function check(string $name, string $namespace, string $interface) : bool {
     $action = $namespace.ucfirst($name);
     $class = new $action();
     var_dump($class);
+    echo "...<br>";
+    var_dump(class_exists($action));
+    echo "...<br>";
     echo "[ ---- ". $action ." ---- ]";
     return class_exists($action) && isset(class_implements($action)[$interface]);
 }
