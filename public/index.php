@@ -7,7 +7,11 @@ require_once dirname(__DIR__,1)."/vendor/autoload.php";
 
 use Massfice\Application\System\Cleans;
 use Massfice\Action\JsonActionFactory;
+
 use Massfice\Action\JsonAction;
+use Massfice\Action\VerifyStatus;
+use Massfice\ResponseStatus\ResponseStatus;
+use Massfice\ResponseStatus\ResponseStatusFactory;
 
 echo "Type: " . Cleans::getType() . "<br>";
 echo "Action: " . Cleans::getAction() . "<br>";
@@ -19,11 +23,24 @@ $action = $factory->create("sidGET");
 var_dump($action);
 
 interface TestInterface {
-
 }
 
 class test implements JsonAction {
+    public function verify() : VerifyStatus {
+        return new VerifyStatus();
+    }
 
+    public function load(array $data, array $config) : array {
+        return [];
+    } 
+
+    public function validate(array $data) : ResponseStatus {
+        return ResponseStatusFactory::create(200);
+    }
+
+    public function execute(array $data) : array {
+        return $data;
+    }
 }
 
 // $test = new Test();
