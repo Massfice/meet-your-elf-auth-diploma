@@ -1,6 +1,6 @@
 <?php
 
-namespace Massfice\Action;
+namespace Massfice\Application\Customs;
 
 use Massfice\Action\Standart\NotFound;
 

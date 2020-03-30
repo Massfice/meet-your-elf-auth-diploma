@@ -1,6 +1,6 @@
 <?php
 
-namespace Massfice\Action;
+namespace Massfice\Application\Customs;
 
 class JsonActionFactory extends ActionFactory {
 
