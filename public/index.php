@@ -19,8 +19,9 @@ echo "Action: " . Cleans::getAction() . "<br>";
 echo "Method: " . $_SERVER["REQUEST_METHOD"] . "<br>";
 
 $factory = new JsonActionFactory("\\Massfice\\Application\\Actions\\");
+echo "kur";
 $action = $factory->create("sidGET");
-
+echo "wa";
 var_dump($action);
 
 interface TestInterface {
