@@ -3,6 +3,7 @@
 namespace Massfice\Application\Customs;
 
 use Massfice\Action\Standart\NotFound;
+use Massfice\Action\JsonAction;
 
 abstract class ActionFactory {
 
@@ -17,12 +18,9 @@ abstract class ActionFactory {
 
     public function create(string $name) : JsonAction {
         $action = $this->namespace.ucfirst($name);
-        echo $action."<br>";
         if($this->check($name)) {
-            var_dump(new $name());
             return new $action();
         } else {
-            var_dump(new NotFound());
             return new NotFound();
         }
     }
