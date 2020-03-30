@@ -29,15 +29,17 @@ abstract class ActionFactory {
         echo "<br>--------------------------------------<br>";
         $action = $this->namespace.ucfirst($name);
         echo "<br>--------------------------------------<br>";
+        echo "Action: ";
         var_dump($action);
         echo "<br>--------------------------------------<br>";
-        var_dump(class_exists($action));
+        echo "Class exists: "; var_dump(class_exists($action));
         echo "<br>--------------------------------------<br>";
-        var_dump(class_implements($action));
+        echo "Interfaces: "; var_dump(class_implements($action));
         echo "<br>--------------------------------------<br>";
-        var_dump(isset(class_implements($action)[$this->interface]));
+        echo "Interface isset: "; var_dump(isset(class_implements($action)[$this->interface]));
         echo "<br>--------------------------------------<br>";
         echo "<br>--------------------------------------<br>";
+        echo "<br><br><br><br>";
 
         return class_exists($action) && isset(class_implements($action)[$this->interface]);
     }
