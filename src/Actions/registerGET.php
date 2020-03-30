@@ -7,7 +7,7 @@ use Massfice\Application\System\Views;
 use Massfice\Application\System\Cleans;
 require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 
-class registerGET implements \HtmlAction {
+class RegisterGET implements \HtmlAction {
     public function verify() : \VerifyStatus {
         return new \VerifyStatus();
     }

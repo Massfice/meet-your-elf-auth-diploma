@@ -9,7 +9,7 @@ use Massfice\Application\System\Services;
 use Massfice\Application\System\JsonData;
 use Massfice\Application\Customs\Session\Session;
 
-class loginPOST extends SidAction implements \HtmlAction {
+class LoginPOST extends SidAction implements \HtmlAction {
     private $seed;
 
     private function getLoginData(array $loginPOST) : array {

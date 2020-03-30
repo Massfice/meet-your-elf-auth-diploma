@@ -9,7 +9,7 @@ require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 use Massfice\Application\System\Services;
 use Massfice\Application\System\JsonData;
 
-class registerPOST implements \HtmlAction {
+class RegisterPOST implements \HtmlAction {
     private function getRegisterData(array $registerPOST) : array {
         $headers = getallheaders();
         $type = $headers["Content-Type"];

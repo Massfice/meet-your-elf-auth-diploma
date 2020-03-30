@@ -7,7 +7,7 @@ require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 use Massfice\Application\System\Services;
 use Massfice\Application\Customs\Session\Session;
 
-class logoutDELETE extends SidAction {
+class LogoutDELETE extends SidAction {
     private $session;
     public function load(array $data, array $config) : array {
         $this->session = new Session($config["sid"]);

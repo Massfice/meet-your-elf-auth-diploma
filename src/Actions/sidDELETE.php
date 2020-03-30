@@ -8,7 +8,7 @@ use Massfice\Application\Customs\Session\Session;
 
 require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 
-class sidDELETE extends SidAction {
+class SidDELETE extends SidAction {
     public function load(array $data, array $config) : array {
         return [
             "sid" => $config["sid"]

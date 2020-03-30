@@ -9,7 +9,7 @@ require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 
 use Massfice\Application\Customs\Session\Session;
 
-class loginGET implements \HtmlAction {
+class LoginGET implements \HtmlAction {
     public function verify() : \VerifyStatus {
         return new \VerifyStatus();
     }

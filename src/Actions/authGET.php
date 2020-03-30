@@ -7,7 +7,7 @@ require_once(Import::option("Massfice\\Action\\","ActionCreator"));
 use Massfice\Application\System\Services;
 use Massfice\Application\Customs\Session\Session;
 
-class authGET extends SidAction {
+class AuthGET extends SidAction {
     public function load(array $data, array $config) : array {
         $session = new Session($config["sid"]);
         $seed = $session->get("seed");
