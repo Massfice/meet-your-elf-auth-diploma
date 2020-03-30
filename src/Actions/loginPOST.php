@@ -61,7 +61,7 @@ class LoginPOST extends SidAction implements \HtmlAction {
     public function validate(array $data) : \ResponseStatus {
         $this->session = new Session($data["sid"]);
 
-        $seed = $session->get("seed");
+        $seed = $this->session->get("seed");
 
         if($seed == "-1") {
             $status = \ResponseStatusFactory::create(400);
