@@ -27,7 +27,7 @@ abstract class ActionFactory {
 
     public function check(string $name) : bool {
         echo "<br>--------------------------------------<br>";
-        $action = $this->namespace.ucfirst($name);
+        $action = $this->namespace.$name;
         echo "<br>--------------------------------------<br>";
         echo "Action: ";
         var_dump($action);
