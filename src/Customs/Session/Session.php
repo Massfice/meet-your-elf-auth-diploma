@@ -18,6 +18,7 @@ class Session {
         @session_id($sid);
         @session_start();
 
+        setcookie("authenticator-session", "", time()-3600);
         return $sid;
     }
 
