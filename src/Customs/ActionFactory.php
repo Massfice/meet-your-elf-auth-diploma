@@ -26,18 +26,18 @@ abstract class ActionFactory {
     }
 
     public function check(string $name) : bool {
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
         $action = $this->namespace.ucfirst($name);
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
         var_dump($action);
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
         var_dump(class_exists($action));
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
         var_dump(class_implements($action));
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
         var_dump(isset(class_implements($action)[$this->interface]));
-        echo "--------------------------------------<br>";
-        echo "--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
+        echo "<br>--------------------------------------<br>";
 
         return class_exists($action) && isset(class_implements($action)[$this->interface]);
     }
