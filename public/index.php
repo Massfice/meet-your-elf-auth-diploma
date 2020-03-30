@@ -6,7 +6,7 @@
 require_once dirname(__DIR__,1)."/vendor/autoload.php";
 
 use Massfice\Application\System\Cleans;
-use Massfice\Action\JsonActionFactory;
+use Massfice\Application\Customs\JsonActionFactory;
 
 use Massfice\Action\JsonAction;
 use Massfice\Action\VerifyStatus;
