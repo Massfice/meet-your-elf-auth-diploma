@@ -60,6 +60,7 @@ class Session {
     public function destroy() {
         $_SESSION = array();
         session_destroy();
+        setcookie("authenticator-session", "", time()-3600);
         return null;
     }
 }
