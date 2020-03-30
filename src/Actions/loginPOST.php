@@ -63,9 +63,9 @@ class LoginPOST extends SidAction implements \HtmlAction {
 
         $seed = $this->session->get("seed");
 
-        if($seed == "-1") {
+        if($seed != "-1") {
             $status = \ResponseStatusFactory::create(400);
-            $status->addError("You can't login, if you are logged it already");
+            $status->addError("You can't login, if you are logged in already");
             return $status;
         }
 
