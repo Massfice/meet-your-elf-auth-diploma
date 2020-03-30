@@ -34,7 +34,6 @@ class AuthGET extends SidAction {
             "auth" => $valid,
             "details" => $details,
             "seed" => $seed,
-            "code" => $service->getCode()
         ];
     }
 

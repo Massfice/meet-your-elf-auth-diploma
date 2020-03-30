@@ -37,7 +37,10 @@ class DataConfig {
                 ],
                 "redirect" => [
                     "field_name" => "redirect",
-                    "required" => true,
+                    "required" => [
+                        "form" => true,
+                        "api" => false
+                    ],
                     "type" => "string"
                 ],
                 "sid" => [
