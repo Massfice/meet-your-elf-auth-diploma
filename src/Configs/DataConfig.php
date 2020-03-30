@@ -6,7 +6,7 @@ use Massfice\Application\Customs\Sid;
 
 class DataConfig {
     private static function getLoginPost() : array {
-        $login_endpoint = "http://localhost/social-authenticator/public/login/";
+        $login_endpoint = "https://meet-your-elf-auth.herokuapp.com/public/login/";
         $login_html_endpoint = $login_endpoint."html";
         $login_api_endpoint = $login_endpoint."json";
 
@@ -50,7 +50,7 @@ class DataConfig {
     }
 
     private static function getRegisterPost() : array {
-        $register_endpoint = "http://localhost/social-authenticator/public/register/";
+        $register_endpoint = "https://meet-your-elf-auth.herokuapp.com/public/register/";
         $register_html_endpoint = $register_endpoint."html";
         $register_api_endpoint = $register_endpoint."json";
 
