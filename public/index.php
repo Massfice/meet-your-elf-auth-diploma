@@ -13,6 +13,7 @@ use Massfice\Action\VerifyStatus;
 use Massfice\ResponseStatus\ResponseStatus;
 use Massfice\ResponseStatus\ResponseStatusFactory;
 
+
 echo "Type: " . Cleans::getType() . "<br>";
 echo "Action: " . Cleans::getAction() . "<br>";
 echo "Method: " . $_SERVER["REQUEST_METHOD"] . "<br>";
