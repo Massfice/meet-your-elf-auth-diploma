@@ -11,6 +11,7 @@ use Massfice\Application\Customs\Session\Session;
 
 class LoginPOST extends SidAction implements \HtmlAction {
     private $seed;
+    private $session;
 
     private function getLoginData(array $loginPOST) : array {
         $headers = getallheaders();
@@ -47,6 +48,7 @@ class LoginPOST extends SidAction implements \HtmlAction {
             ];
         }
 
+        $data["type"] = $type;
         return $data;
     }
 
@@ -57,6 +59,15 @@ class LoginPOST extends SidAction implements \HtmlAction {
     }
 
     public function validate(array $data) : \ResponseStatus {
+        $this->session = new Session($data["sid"]);
+
+        $seed = $session->get("seed");
+
+        if($seed == "-1") {
+            $status = \ResponseStatusFactory::create(400);
+            $status->addError("You can't login, if you are logged it already");
+            return $status;
+        }
 
         $errors = [];
 
@@ -68,7 +79,7 @@ class LoginPOST extends SidAction implements \HtmlAction {
             $errors[] = "You have to insert password";
         }
 
-        if(empty($data["redirect"]) || empty($data["sid"])) {
+        if((empty($data["redirect"]) && $data["type"] != "application/json") || empty($data["sid"])) {
             $errors[] = "Redirect or sid missing";
         }
 
@@ -84,7 +95,9 @@ class LoginPOST extends SidAction implements \HtmlAction {
 
             if($service->session != null) {
                 $status = \ResponseStatusFactory::create($data["success"]);
-                $status->setLocation($data["redirect"]);
+                if($data["type"] != "application/json") {
+                    $status->setLocation($data["redirect"]);
+                }
                 $this->seed = $service->session;
             } else {
                 $status = \ResponseStatusFactory::create($data["failure"]);
@@ -101,8 +114,7 @@ class LoginPOST extends SidAction implements \HtmlAction {
     }
 
     public function execute(array $data) : array {
-        $session = new Session($data["sid"]);
-        $session->set("seed",$this->seed);
+        $this->session->set("seed",$this->seed);
         return [
             "Status" => "Ok"
         ];
