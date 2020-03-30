@@ -17,7 +17,7 @@ abstract class ActionFactory {
 
     public function create(string $name) : JsonAction {
         $action = $this->namespace.ucfirst($name);
-
+        echo $action."<br>";
         if($this->check($name)) {
             return new $action();
         } else {
