@@ -20,7 +20,7 @@ class DataConfig {
             "api" => [
                 "Content-Type" => "application/json",
                 "Endpoint" => $login_api_endpoint,
-                "ExpectedStatusCode-Success" => 303,
+                "ExpectedStatusCode-Success" => 200,
                 "ExpectedStatusCode-Failure" => 401
             ],
             "Method" => "POST",

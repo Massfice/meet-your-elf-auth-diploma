@@ -6,6 +6,7 @@ class Session {
     private $sid;
 
     private function start() : string {
+        @ini_set('session.use_cookies', 0);
         @session_start();
         @session_regenerate_id(false);
         $sid = session_id();
