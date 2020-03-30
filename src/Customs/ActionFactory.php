@@ -19,8 +19,10 @@ abstract class ActionFactory {
         $action = $this->namespace.ucfirst($name);
         echo $action."<br>";
         if($this->check($name)) {
+            var_dump(new $name());
             return new $action();
         } else {
+            var_dump(new NotFound());
             return new NotFound();
         }
     }
