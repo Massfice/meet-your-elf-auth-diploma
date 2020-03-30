@@ -10,7 +10,7 @@ class Session {
         @session_start();
         @session_regenerate_id(false);
         $sid = session_id();
-
+        header_remove('Set-Cookie');
         return $sid;
     }
 

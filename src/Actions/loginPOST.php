@@ -116,7 +116,7 @@ class LoginPOST extends SidAction implements \HtmlAction {
     public function execute(array $data) : array {
         $this->session->set("seed",$this->seed);
         return [
-            "Status" => "Ok"
+            "Status" => "Success"
         ];
     }
 
