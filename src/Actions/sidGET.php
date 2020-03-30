@@ -8,7 +8,7 @@ use Massfice\ActionManager\BadRequest;
 use Massfice\Application\Customs\SidValidator;
 use Massfice\Application\Customs\Session\Session;
 
-class sidGET implements \JsonAction {
+class SidGET implements \JsonAction {
     public function verify() : \VerifyStatus {
         return new \VerifyStatus();
     }
