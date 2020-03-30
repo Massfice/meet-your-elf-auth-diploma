@@ -20,9 +20,9 @@ echo "Method: " . $_SERVER["REQUEST_METHOD"] . "<br>";
 
 $factory = new JsonActionFactory("\\Massfice\\Application\\Actions\\");
 // var_dump($factory);
-$action = $factory->create("sidGET");
+$action = $factory->create("SidGET");
 // echo "wa";
-// var_dump($action);
+var_dump($action);
 
 // interface TestInterface {
 // }
