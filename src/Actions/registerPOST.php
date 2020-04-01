@@ -35,8 +35,8 @@ class RegisterPOST implements \HtmlAction {
                 "failure" => $failure
             ];
         } else {
-            $success = $loginPOST["api"]["ExpectedStatusCode-Success"];
-            $failure = $loginPOST["api"]["ExpectedStatusCode-Failure"];
+            $success = $registerPOST["api"]["ExpectedStatusCode-Success"];
+            $failure = $registerPOST["api"]["ExpectedStatusCode-Failure"];
             $data = [
                 "username" => JsonData::get($username) !== null ? JsonData::get($username) : "",
                 "password" => JsonData::get($password) !== null ? JsonData::get($password) : "",
