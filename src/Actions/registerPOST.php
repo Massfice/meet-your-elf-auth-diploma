@@ -42,7 +42,7 @@ class RegisterPOST implements \HtmlAction {
                 "password" => JsonData::get($password) !== null ? JsonData::get($password) : "",
                 "repassword" => JsonData::get($repassword) !== null ? JsonData::get($repassword) : "",
                 "firstName" => JsonData::get($firstName) !== null ? JsonData::get($firstName) : "",
-                "firstName" => JsonData::get($lastName) !== null ? JsonData::get($lastName) : "",
+                "lastName" => JsonData::get($lastName) !== null ? JsonData::get($lastName) : "",
                 "success" => $success,
                 "failure" => $failure
             ];
