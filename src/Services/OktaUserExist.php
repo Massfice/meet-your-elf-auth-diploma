@@ -19,7 +19,7 @@ class OktaUserExist implements ServiceObject {
 
     public function prepare(&$curl, array $data) : array {
         return [
-            "Authorization: SSWS 00DiF9BRoS5No6BO9jJyVzPDdKyPannGtAFC2JOHY4"
+            "Authorization: SSWS 00hLo9uLeEEbKmYPOtEjiRul3Qp7rN4HcEUaN-0h40" //User Exist Token
         ];
     }
 

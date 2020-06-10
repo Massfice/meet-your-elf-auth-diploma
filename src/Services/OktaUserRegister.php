@@ -46,7 +46,7 @@ class OktaUserRegister implements ServiceObject {
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 
         return [
-            "Authorization: SSWS 00Sn9xxWPmvmVZbDZNplbxLTmdHZOpNvYwyjvqhSBX"
+            "Authorization: SSWS 00mwVVvBlNlZ3zb62tnPC9xfOBU_zTRBna211HbQ3Q" //User Register Token
         ];
     }
 

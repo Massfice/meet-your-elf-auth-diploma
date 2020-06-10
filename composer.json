@@ -13,7 +13,9 @@
         "massfice/application-system": "^v1.0",
         "massfice/smart": "^v1.0",
         "massfice/service": "^v1.0",
-        "massfice/loader": "^1.0"
+        "massfice/loader": "^1.0",
+        "firebase/php-jwt": "^5.2",
+        "predis/predis": "^1.1"
     },
     "license": "MIT",
     "authors": [
