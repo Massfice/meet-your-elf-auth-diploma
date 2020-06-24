@@ -50,6 +50,7 @@ Currently it's configured to support local development. It's not commercial proj
     - "http://localhost:8080"
     - "http://localhost:80"
     - "http://localhost"
+
 I think, it's enough, but if you need something different, just clone it into your local http root directory:
 `git clone https://github.com/Massfice/meet-your-elf-auth-diploma`
 And make changes in CorsConfig (located in *src/Customs*) or Config (located in *src/Configs*). **Config class** is developer customizable class that are executed first. Then install composer depedencies:
