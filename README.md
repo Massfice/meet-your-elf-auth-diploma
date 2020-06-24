@@ -12,6 +12,8 @@ It uses:
 - Heroku (it's already deployed: [here](http://meet-your-elf-auth.herokuapp.com/public/))
 - [Okta](https://www.okta.com/) and [Okta Developer](https://developer.okta.com/)
 - [My own PHP mini-framework](https://github.com/Massfice/application)
+- Composer
+- Git
 
 ## Solution
 
@@ -30,3 +32,31 @@ It generates token based on provided credentials and validates this token in fut
         - **POST**: This endpoint expects *username*, *password*, *repassword*, *firstName* and *lastName* in json format. It validates provided data against own rules and then forwarded it into Okta to further process. If everything went good, user would be created.
     - **{host}/public/secret/json:**
         - **PUT**: This endpoint expects "Authorization Bearer" header with token. It decodes *outside token* and then retrieves username. Then it generates new secret for particular user randomly and saves this secret in Redis database. Prior tokens will be instantly *blacklisted* and unreadable. It *destroys* all token generated for particular user. It's logout mechanism and additional security layer.
+
+###### Cors Config
+Currently it's configured to support local development. It's not commercial project and I decided to allow for each endpoint:
+- **Headers:**
+    - Authorization
+    - Content-Type
+- **Methods:**
+    - GET
+    - PUT
+    - POST
+    - DELETE
+    - HEAD
+- **Origins:**
+    - "http://localhost:3000"
+    - "http://localhost:8000"
+    - "http://localhost:8080"
+    - "http://localhost:80"
+    - "http://localhost"
+I think, it's enough, but if you need something different, just clone it into your local http root directory:
+`git clone https://github.com/Massfice/meet-your-elf-auth-diploma`
+And make changes in CorsConfig (located in *src/Customs*) or Config (located in *src/Configs*). **Config class** is developer customizable class that are executed first. Then install composer depedencies:
+`composer install`
+Make sure it is located directly into local server root directory, because there's a problem with action/URI params/clean urls resolving when it is placed into subfolders.
+
+## End Words
+
+I'm Adrian Larysz. I want to became a developer. I have some commercial experience. Like I said, it's for my diploma project. To prove that I'm the author, I created additional endpoint: [About](https://meet-your-elf-auth.herokuapp.com/public/about/json).
+

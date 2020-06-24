@@ -68,7 +68,17 @@ class DataConfig {
 
         return [
             "loginPOST" => $loginPOST,
-            "registerPOST" => $registerPOST
+            "registerPOST" => $registerPOST,
+            "About" => [
+                "author" => [
+                    "name" => "Adrian",
+                    "surname" => "Larysz",
+                    "email" => "adrian.marian.tomasz.larysz@gmail.com"
+                ],
+                "shared_with" => [
+                    "Another Dimension"
+                ]
+            ]
         ];
     }
 }
