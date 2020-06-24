@@ -59,5 +59,5 @@ Make sure it is located directly into local server root directory, because there
 
 ## End Words
 
-I'm Adrian Larysz. I want to became a developer. I have some commercial experience. Like I said, it's for my diploma project. To prove that I'm the author, I created additional endpoint: [About](https://meet-your-elf-auth.herokuapp.com/public/about/json).
+I'm Adrian Larysz. Like I said, it's for my diploma project. To prove that I'm the author, I created additional endpoint: [About](https://meet-your-elf-auth.herokuapp.com/public/about/json).
 
