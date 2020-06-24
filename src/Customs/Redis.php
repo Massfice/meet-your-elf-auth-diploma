@@ -10,9 +10,12 @@ class Redis {
     private $client;
 
     private function __construct() {
-        $redis_url =
-            "redis://h:pc7f67c6330794294f83d59553b71cedbe61723e7775b6e946dde97ff936d9bb4@ec2-108-128-144-158.eu-west-1.compute.amazonaws.com:10819";
-        $this->client = new Client($redis_url);
+        $this->client = new Client([
+            'host' => 'ec2-52-48-169-213.eu-west-1.compute.amazonaws.com',
+            'port' => 13789,
+            'password' => 'pc7f67c6330794294f83d59553b71cedbe61723e7775b6e946dde97ff936d9bb4',
+            'timeout' => 300
+        ]);
     }
 
     public function __destruct() {
