@@ -78,7 +78,7 @@ class DataConfig {
                 "shared_with" => [
                     "Another Dimension"
                 ],
-                "guthub_link" => "https://github.com/Massfice/meet-your-elf-auth-diploma"
+                "github_link" => "https://github.com/Massfice/meet-your-elf-auth-diploma"
             ]
         ];
     }
